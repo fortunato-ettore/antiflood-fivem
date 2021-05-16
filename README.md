@@ -1,13 +1,13 @@
 # antiflood-fivem
 Basicamente é um script na qual você consegue limitar a quantidade de vezes que determinada função é chamada, evitando dumps e flood.
 
--- Comando: vRP.antiflood(source,key,limite)
+-- **Comando:** vRP.antiflood(source,key,limite)
 
--- source -> player que acionou o evento/comando
+-- **source** **->** player que acionou o evento/comando
 
--- key 	-> origem do flood, uma forma de identificar onde ele floodou, uma dica é colocar o comando q ta sendo usado o antiflood ou o evento onde está o antiflood (Pode ter qualquer nome)
+-- **key** 	**->** origem do flood, uma forma de identificar onde ele floodou, uma dica é colocar o comando q ta sendo usado o antiflood ou o evento onde está o antiflood (Pode ter qualquer nome)
 
--- limite -> tolerancia para o antiflood banir o cara, isso varia de caso pra caso.
+-- **limite** **->** tolerancia para o antiflood banir o cara, isso varia de caso pra caso.
 
 -- um comando como o ilegal por exemplo, é bom colocar um valor alto, por volta de 10 pra evitar banir o pessoal que manda mt mensagem picotada no ilegal.
 
@@ -15,9 +15,9 @@ Basicamente é um script na qual você consegue limitar a quantidade de vezes qu
 
 
 
---Exemplos de uso:
+**--Exemplos de uso:**
 
--- antiflood no comando ilegal evitando que o povo floode
+-- Antiflood no comando ilegal evitando que o povo floode
 
 	RegisterCommand('ilegal', function(source, args, rawCommand)
 	
@@ -36,7 +36,7 @@ Basicamente é um script na qual você consegue limitar a quantidade de vezes qu
 	end)
 
 
---antiflood em um evento de spawn de dinheiro
+-- Antiflood em um evento de spawn de dinheiro
 
 	RegisterServerEvent("reanimar:pagamento_")
 	AddEventHandler("reanimar:pagamento_",function()
