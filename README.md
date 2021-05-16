@@ -14,28 +14,32 @@ limite 	-> tolerancia para o antiflood banir o cara, isso varia de caso pra caso
 
 --Exemplos de uso:
 
-antiflood no comando ilegal evitando que o povo floode
+-- antiflood no comando ilegal evitando que o povo floode
 
-RegisterCommand('ilegal', function(source, args, rawCommand)
-	vRP.antiflood(source,"/ilegal",10)
-	local user_id = vRP.getUserId(source)
-	if user_id ~= nil then
-		local player = vRP.getUserSource(user_id)
-		if not vRP.hasPermission(user_id,"policia.permissao") then
-			Citizen.CreateThread(function()
-				print("[Anonimo] " ..GetPlayerName(player).. " - " ..user_id .. ':' .. rawCommand:sub(7))					
-			end)
-			TriggerClientEvent('chatMessage', -1, "[@Anonimo]", {255, 255, 255}, rawCommand:sub(7))			
+	RegisterCommand('ilegal', function(source, args, rawCommand)
+	
+		vRP.antiflood(source,"/ilegal",10)
+		
+		local user_id = vRP.getUserId(source)
+		if user_id ~= nil then
+			local player = vRP.getUserSource(user_id)
+			if not vRP.hasPermission(user_id,"policia.permissao") then
+				Citizen.CreateThread(function()
+					print("[Anonimo] " ..GetPlayerName(player).. " - " ..user_id .. ':' .. rawCommand:sub(7))					
+				end)
+				TriggerClientEvent('chatMessage', -1, "[@Anonimo]", {255, 255, 255}, rawCommand:sub(7))			
+			end
 		end
-	end
-end)
+	end)
 
 
 --antiflood em um evento de spawn de dinheiro
 
-RegisterServerEvent("reanimar:pagamento_")
-AddEventHandler("reanimar:pagamento_",function()
+	RegisterServerEvent("reanimar:pagamento_")
+	AddEventHandler("reanimar:pagamento_",function()
+
 	vRP.antiflood(source,"/ilegal",3)
+	
 	local user_id = vRP.getUserId(source)
 	if user_id then
 		pagamento = math.random(50,80)
