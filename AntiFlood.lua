@@ -1,3 +1,5 @@
+-- Colocar dentro de vrp > modules
+
 local webhook_antiflood = "WEBHOOKAQUI"
 
 local delayflood = {}
