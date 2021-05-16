@@ -1,18 +1,17 @@
 # antiflood-fivem
-Basicamente é um script na qual você consegue limitar a quantidade de vezes que determinada função é chamada, evitando dumps e flood.
+Basicamente é um script na qual você consegue limitar a quantidade de vezes que determinada função é chamada em 1 segundo, evitando dumps e flood.
 
 -- **Comando:** vRP.antiflood(source,key,limite)
 
--- **source** **->** player que acionou o evento/comando
+-- **source** **->** Cidadão que acionou o evento/comando
 
--- **key** 	**->** origem do flood, uma forma de identificar onde ele floodou, uma dica é colocar o comando q ta sendo usado o antiflood ou o evento onde está o antiflood (Pode ter qualquer nome)
+-- **key** 	**->** Origem do flood, uma forma de identificar onde ele floodou, uma dica é colocar o comando q ta sendo usado o antiflood ou o evento onde está o antiflood (Pode ter qualquer nome)
 
--- **limite** **->** tolerancia para o antiflood banir o cara, isso varia de caso pra caso.
+-- **limite** **->** Limite para o antiflood banir o cidadão, você que define.
 
--- um comando como o ilegal por exemplo, é bom colocar um valor alto, por volta de 10 pra evitar banir o pessoal que manda mt mensagem picotada no ilegal.
+-- Um comando como o chat por exemplo, é bom colocar um valor alto, por volta de 8 pra evitar banir o pessoal que manda muita mensagem.
 
--- em um evento/função que vc sabe q n tem como floodar, tipo, tirar item do bau por exemplo, isso vc pode colocar uma tolerancia baixa, tipo 2 pois você sabe que no intervalor de 1seg o kr n consegue fazer mais requisições que isso.
-
+-- Em um evento/função que vc sabe q não tem como floodar sem querer, tipo, tirar item do baú por exemplo, você pode colocar uma tolêrancia baixa, tipo 3, pois você sabe que no intervalo de 1 segundo o cara não faz nessa velocidade.
 
 
 **--Exemplos de uso:**
