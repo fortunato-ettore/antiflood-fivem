@@ -18,8 +18,6 @@ antiflood no comando ilegal evitando que o povo floode
 
 RegisterCommand('ilegal', function(source, args, rawCommand)
 	vRP.antiflood(source,"/ilegal",10)
-	
-	
 	local user_id = vRP.getUserId(source)
 	if user_id ~= nil then
 		local player = vRP.getUserSource(user_id)
@@ -37,9 +35,7 @@ end)
 
 RegisterServerEvent("reanimar:pagamento_")
 AddEventHandler("reanimar:pagamento_",function()
-
 	vRP.antiflood(source,"/ilegal",3)
-  
 	local user_id = vRP.getUserId(source)
 	if user_id then
 		pagamento = math.random(50,80)
