@@ -1,6 +1,8 @@
 # antiflood-fivem
 Basicamente é um script na qual você consegue limitar a quantidade de vezes que determinada função é chamada em 1 segundo, evitando dumps e flood.
 
+Colocar dentro de vrp > modules
+
 -- **Comando:** vRP.antiflood(source,key,limite)
 
 -- **source** **->** Cidadão que acionou o evento/comando
