@@ -51,3 +51,6 @@ Colocar dentro de vrp > modules
 			TriggerClientEvent("Notify",source,"sucesso","Recebeu <b>$"..pagamento.." dólares</b> de gorjeta do americano.")
 		end
 	end)
+
+
+Créditos: Cowboy Leaks
